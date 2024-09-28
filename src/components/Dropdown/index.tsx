@@ -146,13 +146,12 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
     );
 
     useEffect(() => {
-      if (data && searchText.length === 0) {
+      if (data && data.length > 0) {
         const filterData = excludeData(data);
         setListData([...filterData]);
-      }
-
-      if (searchText) {
-        onSearch(searchText);
+        if (searchText) {
+          onSearch(searchText);
+        }
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data, searchText]);
