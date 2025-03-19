@@ -1,0 +1,12 @@
+!lib/
+lib/typescript/example
+node_modules/
+src/
+example/
+scripts/
+.vscode/
+.github/
+tsconfig.json
+tsconfig.*.json
+tslint.json
+.env
